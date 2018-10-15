@@ -1,22 +1,20 @@
 $(document).ready(function() {
 
   var cipherPhase1 = function(sentence) {
-    var newSentence = sentence.toUpperCase().charAt(0);
-    alert(newSentence);
-  };
-
-  var cipherPhase2 = function(sentence) {
-    // var last = newSentence.length - 1;
-    var newSentence = sentence.toUpperCase().charAt(length-1);
-    alert(newSentence);
+    var firstLetter = sentence.toUpperCase().charAt(0);
+    alert(firstLetter);
+    var lastLetter = sentence.toUpperCase().charAt(sentence.length-1);
+    alert(lastLetter);
+    // lastLetter "middle of string" firstLetter
+    sentence = sentence.replace(sentence.charAt(sentence.length-1), firstLetter);
+    sentence = sentence.replace(sentence.charAt(0), lastLetter);
+    alert(sentence);
 
   };
 
 
   var sentence = prompt("Please type a sentence.");
-  var length = sentence.length;
-  alert(length);
   cipherPhase1(sentence);
-  cipherPhase2(sentence);
+
 
 });
