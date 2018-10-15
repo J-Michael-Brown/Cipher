@@ -1,3 +1,3 @@
 ### _known Bugs_
 #
-* _none as of yet_
+* _second function does not swap first and last characters in sentence._
